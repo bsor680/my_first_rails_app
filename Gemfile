@@ -1,14 +1,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '3.4.8'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.1.0'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'sqlite3'
- end
+  gem 'sqlite3', '~> 1.4'
+   gem 'minitest', '~> 5.0'
+end
  
  group :production do
    gem 'pg'
@@ -61,8 +62,19 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "mutex_m", "~> 0.3.0"
+
+gem "erb", "~> 6.0"
+
+gem "bigdecimal", "~> 4.0"
+gem "base64", "~> 0.3.0"
+gem "drb", "~> 2.2"
+gem "logger", "~> 1.7"
+gem "csv", "~> 3.3"
+gem "ostruct", "~> 0.6.3"
